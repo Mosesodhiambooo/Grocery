@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html media="screen">
+<head>
+<title>Zuri Online Grocery</title>
+<link rel="stylesheet" href="Grocery.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <!-- Header content -->
+  </header>
+
+  <div class="nav-wrapper">
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="Grocery.html">Home</a></li>
+        <li><a href="Glogin.html">Log In</a></li>
+        <li><a href="MoGrocery.html">Order Online</a></li>
+        <li><a href="Gabout.html">About Us</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div class="image-holder">
+    <img class="background-img" src="pic/bc.png" width="100%" height="600">
+    <h1 id="caption-1">ZURI ONLINE GROCERY</h1>
+
+    <!-- Offer Section inside the background image -->
+    <div class="offer-section">
+      <p class="offer-text">Up to <span class="offer-highlight">30% OFF</span> on Selected Items!</p>
+      <a href="MoGrocery.html" class="shop-now-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <h1 id="pop-cat">POPULAR CATEGORIES</h1>
+  <hr width="1300">
+
+  <section>
+    <div class="featured-wrapper">
+      <div class="product-container">
+        <p class="cat-text">Dairy Products</p>
+        <img src="pic/milk.png" alt="">
+        <div class="btn-container">
+          <a href="MoGrocery.html?tab=bakery" class="view-more-btn">VIEW MORE</a>
+        </div>
+      </div>
+
+      <div class="product-container">
+        <p class="cat-text">Cold Meat</p>
+        <img src="pic/Cold meat.png" alt="">
+        <div class="btn-container">
+          <a href="MoGrocery.html" class="view-more-btn">VIEW MORE</a>
+        </div>
+      </div>
+
+      <div class="product-container">
+        <p class="cat-text">Fruit and Vegetables</p>
+        <img src="pic/Vege Frut.png" alt="">
+        <div class="btn-container">
+          <a href="MoGrocery.html" class="view-more-btn">VIEW MORE</a>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="testimonial-container">
+      <h2 class="testimonial-heading">What Our Customers Say</h2>
+      <div class="testimonial-carousel">
+          <div class="testimonial">
+              <img src="pic/woman-7175038_1920.jpg" alt="" class="testimonial-img">
+              <p>"Fantastic service—always fresh and on time!"</p>
+              <h3>Faith Alicia</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/man-4568761_1920.jpg" alt="" class="testimonial-img">
+              <p>"The best online grocery experience I've had!"</p>
+              <h3>Chris Emmanuel</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/black-man-4699517_1920.jpg" alt="" class="testimonial-img">
+              <p>"Reliable and fast with top-quality products."</p>
+              <h3>Joshua Otieno</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/black-man-4699517_1920.jpg" alt="" class="testimonial-img">
+              <p>"Effortless shopping and great customer service!"</p>
+              <h3>Edwards David</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/african-woman-1580545_1920.jpg" alt="" class="testimonial-img">
+              <p>"Always a pleasure to shop here, highly recommend!"</p>
+              <h3>Faith Akinyi</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/african-woman-1580545_1920.jpg" alt="" class="testimonial-img">
+              <p>"Great selection and speedy delivery every time."</p>
+              <h3>Jecinter Atieno</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/man-4568761_1920.jpg" alt="" class="testimonial-img">
+              <p>"Top-notch service and unbeatable freshness!"</p>
+              <h3>Maurice Ochieng</h3>
+              <span>Customer</span>
+          </div>
+          <div class="testimonial">
+              <img src="pic/black-woman-5505592_1920.jpg" alt="" class="testimonial-img">
+              <p>"Excellent variety and outstanding service!"</p>
+              <h3>Lorraine Akoth</h3>
+              <span>Customer</span>
+          </div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </section>
+
+  <!-- Sticky Social Media Links -->
+  <div class="social-media">
+      <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <!-- <a href="#" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
+  </div>
+
+    <br>
+
+    <div class="form-container">
+      <div class="form-head-container">
+        <img src="images\email-icon.png" id="email-icon">
+        <p id="contact-us-label">  Contact us</p>
+      </div>
+    
+      <form action="action_page.php">
+        <label class="form-item" for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+    <br>
+    <br>
+    
+    
+    <label class="form-item" for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+    <br>
+    <br>
+    
+    <label class="form-item" for="subject">Subject</label>
+    
+        <textarea id="subject" name="subject" placeholder="How can we help?"></textarea>
+    
+    <br>
+    <br>
+    
+          <input type="submit" value="Submit" id="submit-btn">
+    </form>
+    </div>
+    
+
+    <!-- Modal for cart details -->
+    <div id="cartModal" class="modal">
+      <div class="modal-content">
+          <span class="close-button" id="closeModal">&times;</span>
+          <h2>Cart Details</h2>
+          <p><strong>Number of Items:</strong> <span id="itemCount">0</span></p>
+          <p><strong>Total Weight (kg):</strong> <span id="totalWeight">0</span></p>
+          <p><strong>Total Amount:</strong> <span id="modalTotal">0 KES</span></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:Zurigrocery@gmail.com">Zurigrocery@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254717892776">+254 717 892 776</a></p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="Grocery.html">Home</a></p>
+            <p><a href="Glogin.html">Login</a></p>
+            <p><a href="MoGrocery.html">Order Online</a></p>
+            <p><a href="Gabout.html">About Us</a></p>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="pocial-media">
+              <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+              <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+              <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+              <a href="https://youtube.com" target="_blank" class="fab fa-youtube"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; Zuri Grocery. All rights reserved.</p>
+        </div>
+      </div>
+
+      <script>
+        let currentSlide = 0;
+        const slideInterval = 7000; // 7 seconds
+        const slides = document.querySelectorAll('.testimonial');
+        const totalSlides = slides.length;
+
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.querySelector('.testimonial-carousel').style.transform = `translateX(${offset}%)`;
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+        document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+
+        // Start automatic sliding
+        let slideIntervalId = setInterval(autoSlide, slideInterval);
+
+        // Reset interval on manual slide change
+        function resetAutoSlide() {
+            clearInterval(slideIntervalId);
+            slideIntervalId = setInterval(autoSlide, slideInterval);
+        }
+
+        document.querySelector('.prev').addEventListener('click', resetAutoSlide);
+        document.querySelector('.next').addEventListener('click', resetAutoSlide);
+    </script>
+    </footer>
+  </body>
+</html>
+

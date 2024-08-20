@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="MoGrroc.css">
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="Grocery.html">Home</a></li>
+            <li><a href="Glogin.html">Log In</a></li>
+            <li><a href="MoGrocery.html">Order Online</a></li>
+            <li><a href="Gabout.html">About Us</a></li>
+          </ul>
+        </nav>
+    
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for products..." />
+            <button id="search-button">Search</button>
+            <ul id="suggestions" class="suggestions hidden"></ul>
+        </div>
+        <i class="fas fa-shopping-cart cart-icon"></i>
+        <div class="cart-summary">
+            <p id="cart-items">Total Items: 0</p>
+            <p id="cart-price">Total Price: Ksh 0.00</p>
+            <button class="checkout-button" id="view-cart-button">View Cart</button>
+        </div>
+    
+        <div class="tab">
+            <button class="tablinks" onclick="openCategory(event, 'fruits')">Fruits</button>
+            <button class="tablinks" onclick="openCategory(event, 'vegetables')">Vegetables</button>
+            <button class="tablinks" onclick="openCategory(event, 'dairy')">Dairy</button>
+            <button class="tablinks" onclick="openCategory(event, 'meat')">Meat and Poultry</button>
+            <button class="tablinks" onclick="openCategory(event, 'seafood')">Sea Food</button>
+            <button class="tablinks" onclick="openCategory(event, 'bakery')">Bakery</button>
+            <button class="tablinks" onclick="openCategory(event, 'grains')">Grains</button>
+            <button class="tablinks" onclick="openCategory(event, 'dairy')">Beverages</button>
+            <button class="tablinks" onclick="openCategory(event, 'fruits')"></button>
+            <button class="tablinks" onclick="openCategory(event, 'vegetables')">Vegetables</button>
+            <button class="tablinks" onclick="openCategory(event, 'dairy')">Dairy</button>
+            
+        </div>
+    
+        <!-- Fruit Categories -->
+        <div id="fruits" class="tabcontent">
+            <h2>Fruits</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/Banana.png" alt="">
+                    <h3>Yellow Banana</h3>
+                    <p class="description">Fresh and juicy Bananas.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/orange-72321_1920-removebg-preview.png" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy Oranges.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/tangerines-1721633_1920-removebg-preview.png" alt="">
+                    <h3>Tangerines</h3>
+                    <p class="description">Fresh and juicy Tangerines.</p>
+                    <p class="price">Ksh 30.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/raspberries-3454504_1920__1_-removebg-preview.png" alt="">
+                    <h3>Raspberries</h3>
+                    <p class="description">Fresh and juicy Raspberries.</p>
+                    <p class="price">Ksh 30.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/pineapple-removebg-preview.png" alt="">
+                    <h3>Pineapple</h3>
+                    <p class="description">Fresh and juicy Pineapple.</p>
+                    <p class="price">Ksh 139.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/Banana.png" alt="">
+                    <h3>Yellow Banana</h3>
+                    <p class="description">Fresh and juicy Bananas.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/orange-72321_1920-removebg-preview.png" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy Oranges.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/tangerines-1721633_1920-removebg-preview.png" alt="">
+                    <h3>Tangerines</h3>
+                    <p class="description">Fresh and juicy Tangerines.</p>
+                    <p class="price">Ksh 30.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/raspberries-3454504_1920__1_-removebg-preview.png" alt="">
+                    <h3>Raspberries</h3>
+                    <p class="description">Fresh and juicy Raspberries.</p>
+                    <p class="price">Ksh 30.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="fruits">
+                    <img src="pic/pineapple-removebg-preview.png" alt="">
+                    <h3>Pineapple</h3>
+                    <p class="description">Fresh and juicy Pineapple.</p>
+                    <p class="price">Ksh 139.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    
+
+                <!-- Vegetables Categories -->
+        <div id="vegetables" class="tabcontent">
+            <h2>Vegetables</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="vegetables">
+                    <img src="pic/cabbage.jpg" alt="">
+                    <h3>Cabbage</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="vegetables">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Apple</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="vegetables">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Apple</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="vegetables">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    
+
+                <!-- Dairy Categories -->
+        <div id="dairy" class="tabcontent">
+            <h2>Dairy</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="dairy">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Apple</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="dairy">
+                    <img src="pic/orange-72321_1920-removebg-preview.png" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy Orange.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="dairy">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Milk</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+                <!-- Meat & Poultry Categories -->
+        <div id="meat" class="tabcontent">
+            <h2>Meat & Poultry</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="meat">
+                    <img src="pic/Cold meat.png" alt="">
+                    <h3>Cold Meat</h3>
+                    <p class="description">Fresh and cold Meat.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="meat">
+                    <img src="pic/orange-72321_1920-removebg-preview.png" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy Orange.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="meat">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Milk</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+                <!-- Seafood Categories -->
+        <div id="seafood" class="tabcontent">
+            <h2>Sea Food</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="seafood">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Apple</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="seafood">
+                    <img src="pic/orange-72321_1920-removebg-preview.png" alt="">
+                    <h3>Orange</h3>
+                    <p class="description">Fresh and juicy Orange.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="seafood">
+                    <img src="pic/banana.jpg" alt="">
+                    <h3>Milk</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+                <!-- Grains Categories -->
+        <div id="grains" class="tabcontent">
+            <h2>Grains</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="grains">
+                    <img src="pic/mchele.png" alt="">
+                    <h3>Rice</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="grains">
+                    <img src="pic/rice.png" alt="">
+                    <h3>Pishori Rice</h3>
+                    <p class="description">Fresh and juicy Orange.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="grains">
+                    <img src="pic/mchele.png" alt="">
+                    <h3>Long-Grains</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+                <!-- Bakery Categories -->
+        <div id="bakery" class="tabcontent">
+            <h2>Bakery</h2>
+            <div class="product-container">
+                <!-- Example Product -->
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/pancakes-2291908_1920-removebg-preview (1).png" alt="">
+                    <h3>Pancakes</h3>
+                    <p class="description">Yummy Cakes.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/packages-268250_1920-removebg-preview.png" alt="">
+                    <h3>Cakes</h3>
+                    <p class="description">Fresh.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/cupcakes-5116009_1920-removebg-preview.png" alt="">
+                    <h3>Queen Cakes</h3>
+                    <p class="description">Fresh and juicy apples.</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread1.png" alt="">
+                    <h3>Cake</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread2.jpg" alt="">
+                    <h3>Bread</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread5.png" alt="">
+                    <h3>Cakes</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread7.jpg" alt="">
+                    <h3>Burger</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread5.png" alt="">
+                    <h3>Burger</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread6.jpg" alt="">
+                    <h3>Burger</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-price="100.00" data-category="bakery">
+                    <img src="pic/bread7.jpg" alt="">
+                    <h3>Burger</h3>
+                    <p class="description">Fresh</p>
+                    <p class="price">Ksh 100.00</p>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+        
+    
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label>
+                    <input type="radio" name="payment-method" value="mpesa" checked>
+                    M-Pesa
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="paybill">
+                    Paybill
+                </label>
+                <p class="notification hidden" id="mpesa-notification">
+                    Please complete the M-Pesa payment by following the instructions sent to your phone.
+                </p>
+                <div class="paybill-details" id="paybill-details">
+                    <p><strong>Paybill Number:</strong> 123456</p>
+                    <p><strong>Business Number:</strong> 7890</p>
+                    <p><strong>Account Number:</strong> YourOrderID</p>
+                    <p>To complete your payment:</p>
+                    <ol>
+                        <li>Go to your M-Pesa menu and select "Lipa na M-Pesa".</li>
+                        <li>Select "Paybill".</li>
+                        <li>Enter the Business Number (7890).</li>
+                        <li>Enter the Account Number (YourOrderID).</li>
+                        <li>Enter the amount you wish to pay and follow the on-screen instructions.</li>
+                        <li>You will receive a confirmation SMS once the payment is complete.</li>
+                    </ol>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <!-- Modal for Cart Details -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2>Cart Summary</h2>
+            <table class="modal-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-details">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <p id="modal-total">Total: Ksh 0.00</p>
+            <div class="checkout-form">
+                <h2>Payment Options</h2>
+                <form id="cart-checkout-form">
+                    <label>
+                        <input type="radio" name="payment-method" value="mpesa" checked>
+                        M-Pesa
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="paybill">
+                        Paybill
+                    </label>
+                    <p class="notification hidden" id="cart-mpesa-notification">
+                        Please complete the M-Pesa payment by following the instructions sent to your phone.
+                    </p>
+                    <div class="paybill-details" id="cart-paybill-details">
+                        <p><strong>Paybill Number:</strong> 123456</p>
+                        <p><strong>Business Number:</strong> 7890</p>
+                        <p><strong>Account Number:</strong> YourOrderID</p>
+                        <p>To complete your payment:</p>
+                        <ol>
+                            <li>Go to your M-Pesa menu and select "Lipa na M-Pesa".</li>
+                            <li>Select "Paybill".</li>
+                            <li>Enter the Business Number (7890).</li>
+                            <li>Enter the Account Number (YourOrderID).</li>
+                            <li>Enter the amount you wish to pay and follow the on-screen instructions.</li>
+                            <li>You will receive a confirmation SMS once the payment is complete.</li>
+                        </ol>
+                    </div>
+                    <button type="submit" class="checkout-button">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- Modal for Cart Details -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2>Cart Summary</h2>
+            <table class="modal-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-details">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <p id="modal-total">Total: Ksh 0.00</p>
+            <div class="checkout-form">
+                <h2>Payment Options</h2>
+                <form id="cart-checkout-form">
+                    <label>
+                        <input type="radio" name="payment-method" value="mpesa" checked>
+                        M-Pesa
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="paybill">
+                        Paybill
+                    </label>
+                    <p class="notification hidden" id="cart-mpesa-notification">
+                        Please complete the M-Pesa payment by following the instructions sent to your phone.
+                    </p>
+                    <div class="paybill-details" id="cart-paybill-details">
+                        <p><strong>Paybill Number:</strong> 0717892776</p>
+                        <p><strong>Business Number:</strong>40999244</p>
+                        <p><strong>Account Number:</strong> YourOrderID</p>
+                        <p>To complete your payment:</p>
+                        <ol>
+                            <li>Go to your M-Pesa menu and select "Lipa na M-Pesa".</li>
+                            <li>Select "Paybill".</li>
+                            <li>Enter the Business Number (7890).</li>
+                            <li>Enter the Account Number (YourOrderID).</li>
+                            <li>Enter the amount you wish to pay and follow the on-screen instructions.</li>
+                            <li>You will receive a confirmation SMS once the payment is complete.</li>
+                        </ol>
+                    </div>
+                    <button type="submit" class="checkout-button">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <p>Email: <a href="mailto:Zurigrocery@gmail.com">Zurigrocery@gmail.com</a></p>
+              <p>Phone: <a href="tel:+254717892776">+254 717 892 776</a></p>
+            </div>
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <p><a href="Grocery.html">Home</a></p>
+              <p><a href="Glogin.html">Login</a></p>
+              <p><a href="MoGrocery.html">Order Online</a></p>
+              <p><a href="Gabout.html">About Us</a></p>
+            </div>
+            <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div class="pocial-media">
+                <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+                <a href="https://youtube.com" target="_blank" class="fab fa-youtube"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; Zuri Grocery. All rights reserved.</p>
+          </div>
+        </div>
+    <script src="Mogrdc.js"></script>
+</body>
+</html>
