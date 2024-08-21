@@ -1,52 +1,82 @@
 .body {
-margin: auto;
+  margin: auto;
 }
 
 .div-header {}
 
 .nav-wrapper {
-background-color: #00b300;
-padding: 5px;
-width: 100%;
-position: sticky;
-top: 0;
-z-index: 1;
+  background-color: #00b300;
+  padding: 5px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-list {
-list-style: none;
-padding: 0;
-display: flex;
-align-items: stretch;
-justify-content: space-around;
-width: 100%; 
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%; 
+  flex-wrap: wrap; /* Allows the nav items to wrap on smaller screens */
 }
 
 .nav-list li {
-display: inline;
-margin: 0px;
+  display: inline;
+  margin: 0px;
+  flex: 1 1 auto; /* Ensures items grow and shrink according to the screen size */
+  text-align: center; /* Centers the nav items in each flex box */
 }
 
 .nav-list li a {
-color: white;
-text-decoration: none;
-padding: 22px;
+  color: white;
+  text-decoration: none;
+  padding: 15px 22px; /* Adjusted padding for better responsiveness */
+  display: block; /* Makes the link take up the full width of its parent */
 }
 
 .nav-list li a:hover {
-background-color: darkorange;
+  background-color: darkorange;
 }
 
 .nav-list li a:active {
-background-color: chartreuse;
+  background-color: chartreuse;
 }
 
 .nav-list li a:visited {
-background-color: orange;
+  background-color: orange;
 }
 
 .nav-item {
-color: aliceblue;
+  color: aliceblue;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .nav-list {
+      flex-direction: column; /* Stacks the nav items vertically on smaller screens */
+  }
+
+  .nav-list li {
+      flex: 1 1 100%; /* Makes each item take up the full width */
+      margin: 5px 0; /* Adds space between items */
+  }
+
+  .nav-list li a {
+      padding: 15px; /* Adjusts padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list li a {
+      padding: 10px; /* Further reduces padding for very small screens */
+  }
+
+  .nav-wrapper {
+      padding: 10px; /* Adjusts the wrapper padding for small screens */
+  }
 }
 
 .form-container {
@@ -250,6 +280,69 @@ text-align: center;
   animation-fill-mode: both; /* Ensure the animation effect stays after completion */
 }
 
+/* Media Queries for Responsiveness */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .product-container {
+    max-width: 80%; /* Increase max-width for tablets */
+  }
+
+  .cat-text {
+    font-size: 1.2em; /* Slightly smaller font size for tablets */
+  }
+
+  .btn-container {
+    padding: 10px; /* Adjust padding for tablets */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .product-container {
+    max-width: 90%; /* Further increase max-width for mobile */
+    margin: 10px auto; /* Reduce margin for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .cat-text {
+    font-size: 1em; /* Smaller font size for mobile */
+    padding: 0 5px; /* Reduce padding around text */
+  }
+
+  .btn-container {
+    padding: 10px; /* Adjust padding for mobile */
+    gap: 5px; /* Reduce gap between buttons */
+  }
+
+  .view-more-btn {
+    padding: 8px 16px; /* Adjust button padding for mobile */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .product-container {
+    max-width: 100%; /* Full width for very small screens */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .cat-text {
+    font-size: 0.9em; /* Smaller font size */
+    padding: 0 2px; /* Further reduce padding around text */
+  }
+
+  .btn-container {
+    padding: 8px; /* Adjust padding */
+    gap: 2px; /* Further reduce gap between buttons */
+  }
+
+  .view-more-btn {
+    padding: 6px 12px; /* Adjust button padding */
+  }
+}
+
+
 
 
 /* moses odhiamb0 */
@@ -350,21 +443,21 @@ text-align: center;
   footer {
     background-color: green;
     color: #fff;
-    padding: 20px 20px;
+    padding: 20px;
     text-align: center;
 }
 
+/* Container for footer content */
 footer .container {
     max-width: 1200px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 auto; /* Center the container */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px; /* Add horizontal padding */
 }
 
+/* Top section of the footer */
 footer .footer-top {
     display: flex;
     justify-content: space-between;
@@ -372,50 +465,65 @@ footer .footer-top {
     gap: 20px;
 }
 
+/* Footer sections inside the top section */
 footer .footer-top .footer-section {
     flex: 1;
     min-width: 200px;
 }
 
+/* Footer section headings */
 footer .footer-top h3 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #fff;
 }
 
+/* Footer links and paragraphs */
 footer .footer-top p, footer .footer-top a {
     color: #ccc;
     text-decoration: none;
     font-size: 16px;
 }
 
+/* Hover effect for footer links */
 footer .footer-top a:hover {
     color: #fff;
 }
 
+/* Bottom section of the footer */
 footer .footer-bottom {
     border-top: 1px solid #444;
     padding-top: 20px;
     font-size: 14px;
 }
 
+/* Social media icons */
 footer .social-media {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
 }
 
-footer .pocial-media a {
+/* Social media links */
+footer .social-media a {
     color: #fff;
     font-size: 20px;
     transition: color 0.3s;
 }
 
-footer .pocial-media a:hover {
-    color: #ff04;
+/* Hover effect for social media links */
+footer .social-media a:hover {
+    color: #ff0; /* Corrected color code */
 }
 
-@media (max-width: 768px) {
+/* Media Queries for Responsiveness */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+    footer .container {
+        padding: 0 20px; /* Adjust padding for tablets */
+    }
+
     footer .footer-top {
         flex-direction: column;
         align-items: center;
@@ -426,6 +534,64 @@ footer .pocial-media a:hover {
         margin-bottom: 20px;
     }
 }
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    footer .container {
+        padding: 0 15px; /* Adjust padding for mobile */
+    }
+
+    footer .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-top .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer .footer-bottom {
+        padding-top: 15px; /* Adjust padding for mobile */
+    }
+
+    footer .social-media {
+        flex-direction: column;
+        gap: 10px; /* Increase space between icons */
+    }
+
+    footer .social-media a {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    footer .container {
+        padding: 0 10px; /* Adjust padding for very small screens */
+    }
+
+    footer .footer-top h3 {
+        font-size: 16px; /* Smaller font size for headings */
+    }
+
+    footer .footer-top p, footer .footer-top a {
+        font-size: 14px; /* Smaller font size for links and paragraphs */
+    }
+
+    footer .footer-bottom {
+        font-size: 12px; /* Smaller font size for the footer bottom */
+    }
+
+    footer .social-media {
+        gap: 5px; /* Reduce space between icons */
+    }
+
+    footer .social-media a {
+        font-size: 16px; /* Smaller font size for social media icons */
+    }
+}
+
   
 .modal {
   display: none;
